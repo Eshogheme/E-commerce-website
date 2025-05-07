@@ -1,66 +1,55 @@
 import { FaTimes } from "react-icons/fa";
   export function MobileSidebar({ type, onClose }) {
     return (
-      <aside className="fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg p-4 z-50">
-        <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-black-600"
-      >
-        <FaTimes size={25} />
-      </button>
+      <>
+     <div className="fixed top-0 right-0 h-screen w-[80%] max-w-sm bg-white shadow-lg p-6 z-50 transition-transform duration-300">
+        <button className="absolute top-4 right-4 mb-10" 
+          onClick ={onClose}
+        >
+          <FaTimes size={25} />
+        </button>
 
-        {type === 'search' && (
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Search</h2>
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="w-full p-2 border rounded"
-            />
-          </div>
-        )}
-  
-        {type === 'user' && (
-          <div>
-            <h2 className="text-xl font-semibold mt-7 mb-4">User Account</h2>
-            <button className="block w-full text-left text-lg mb-2 text-gray-700">Login</button>
-            <button className="block w-full text-left text-lg text-gray-700">Register</button>
-          </div>
-        )}
-
-
-        
-          {type === 'bars' && (
-           <div className="flex flex-col items-start gap-y-6 p-6">
-           
-           <ul className="flex flex-col space-y-4 mt-10 mb-20">
-             <li className="text-2xl">New</li>
-             <li className="text-2xl">Men</li>
-             <li className="text-2xl">Women</li>
-             <li className="text-2xl">Kids</li>
-             <li className="text-2xl">Jordan</li>
-             <li className="text-2xl">Sports</li>
-           </ul>
-         
-           
-           <p className="text-xl mb-10">
-             Become a Nike member for the best products, inspiration and stories in sport. <a href="#" className="text-black-600 font-bold">Learn More</a>
-           </p>
-         
-          
-           <div className="flex gap-4 w-full">
-             <button className="flex-1 p-3 rounded-2xl bg-black text-white">
-               Join Us
-             </button>
-             <button className="flex-1 p-3 rounded-2xl border">
-               Sign Up
-             </button>
-           </div>
+        {type === "search" && 
+           <div>
+           <h1 className="font-bold text-xl mt-7 mb-3">Search</h1>
+           <input
+             className="border w-full p-2 mb-10 rounded-lg"
+             type="text"
+             placeholder="Search..."
+           />
          </div>
-         
+         }
 
-        )}
-      </aside>
+          {type === "user" && <div>
+            <h1  className="font-bold text-xl mt-7 mb-3">User</h1>
+            <p>Login</p>
+
+            <p>SignUp</p>
+            </div>
+          }
+
+          {type === "bars" && <div className="flex flex-col justify-between">
+              <h1  className="font-bold text-xl mt-7 mb-3">Menu</h1>
+              <ul className="flex flex-col gap-6 mt-5 mb-5">
+                <li  className="text-xl">New</li>
+                <li  className="text-xl">Men</li>
+                <li  className="text-xl">Women</li>
+                <li  className="text-xl">Kids</li>
+                <li  className="text-xl">Jordan</li>
+                <li  className="text-xl">Sport</li>
+              </ul>
+              <div className="flex gap-7 mt-40">
+                <button className="border p-3 w-[45%] rounded-xl bg-black text-white">
+                  Join Us
+                </button>
+
+                <button className="border  p-3 w-[45%] rounded-xl">
+                  SignUp
+                </button>
+              </div>
+            </div>}
+     </div>
+     </>
     );
   }
   
