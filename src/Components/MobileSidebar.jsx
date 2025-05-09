@@ -1,4 +1,5 @@
 import { FaTimes } from "react-icons/fa";
+import { NavLinks } from './NavLinks';
   export function MobileSidebar({ type, onClose }) {
     return (
       <>
@@ -30,14 +31,7 @@ import { FaTimes } from "react-icons/fa";
 
           {type === "bars" && <div className="flex flex-col justify-between">
               <h1  className="font-bold text-xl mt-7 mb-3">Menu</h1>
-              <ul className="flex flex-col gap-6 mt-5 mb-5">
-                <li  className="text-xl">New</li>
-                <li  className="text-xl">Men</li>
-                <li  className="text-xl">Women</li>
-                <li  className="text-xl">Kids</li>
-                <li  className="text-xl">Jordan</li>
-                <li  className="text-xl">Sport</li>
-              </ul>
+                <NavLinks />
               <div className="flex gap-7 mt-40">
                 <button className="border p-3 w-[45%] rounded-xl bg-black text-white">
                   Join Us

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import logo from '../assets/logo.jpeg';
 import { FaSearch, FaHeart, FaShoppingCart, FaMoon, FaUser,  FaBars  } from 'react-icons/fa';
 import { MobileSidebar } from './MobileSidebar';
+import { NavLinks } from './NavLinks';
 
 export function NavBar() {
     const[ActiveSidebar, setActiveSidebar]= useState(null);
@@ -12,6 +13,10 @@ export function NavBar() {
             src={logo} 
             alt="" 
         />
+
+        <div>
+            <NavLinks />
+        </div>
        <div className="p-2 flex justify-between mr-5 gap-6 lg:p-0">
             <div className="relative flex lg:block w-full lg:w-[70%] lg:mt-7lg:flex lg:mt-3 xl:mt-6">
                 <input
@@ -31,7 +36,7 @@ export function NavBar() {
                     size={20}
                 />
                 </button>
-        </div>
+            </div>
 
             <button
             className='lg:hidden'
